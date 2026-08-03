@@ -10,7 +10,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -34,7 +34,7 @@ header{
     align-items:center;
     padding:15px 40px;
     z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
+    box-shadow:0 2px 10px rgba(0,0,0,.3);
 }
 
 header h2{
@@ -54,27 +54,26 @@ nav a:hover{
     color:#ffd700;
 }
 
-/* Hero Section */
+/* Hero */
 .hero{
     position:relative;
+    width:100%;
     height:100vh;
+    overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    overflow:hidden;
 }
 
 .hero video{
     position:absolute;
     top:50%;
     left:50%;
-    min-width:100%;
-    min-height:100%;
-    width:auto;
-    height:auto;
-    transform:translate(-50%,-50%);
+    width:100%;
+    height:100%;
     object-fit:cover;
+    transform:translate(-50%,-50%);
     z-index:-2;
 }
 
@@ -87,13 +86,13 @@ nav a:hover{
 }
 
 .hero-content{
-    color:#fff;
-    max-width:800px;
+    color:white;
     padding:20px;
+    max-width:800px;
 }
 
 .hero-content h1{
-    font-size:55px;
+    font-size:56px;
     margin-bottom:20px;
 }
 
@@ -104,20 +103,20 @@ nav a:hover{
 
 .btn{
     display:inline-block;
+    padding:15px 35px;
     background:#ffd700;
     color:#000;
-    padding:15px 35px;
     text-decoration:none;
-    border-radius:40px;
+    border-radius:50px;
     font-weight:bold;
     transition:.3s;
 }
 
 .btn:hover{
-    background:#ffffff;
+    background:white;
 }
 
-/* Features */
+/* Sections */
 .container{
     max-width:1100px;
     margin:auto;
@@ -127,22 +126,22 @@ nav a:hover{
 .container h2{
     text-align:center;
     color:#0057b8;
-    margin-bottom:35px;
+    margin-bottom:40px;
     font-size:36px;
 }
 
 .features{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:20px;
 }
 
 .card{
     background:#fff;
-    padding:25px;
     border-radius:15px;
+    padding:25px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
     transition:.3s;
 }
 
@@ -158,25 +157,24 @@ nav a:hover{
 /* Footer */
 footer{
     background:#0057b8;
-    color:#fff;
+    color:white;
     text-align:center;
-    padding:25px;
+    padding:30px;
 }
 
-footer a{
-    color:#ffd700;
-    text-decoration:none;
+footer p{
+    margin:8px 0;
 }
 
 /* WhatsApp */
 .whatsapp{
     position:fixed;
-    right:20px;
     bottom:20px;
+    right:20px;
     width:65px;
     height:65px;
     background:#25D366;
-    color:#fff;
+    color:white;
     border-radius:50%;
     display:flex;
     justify-content:center;
@@ -186,6 +184,7 @@ footer a{
     box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
+/* Mobile */
 @media(max-width:768px){
 
 header{
@@ -198,8 +197,8 @@ nav{
 }
 
 nav a{
-    margin:8px;
     display:inline-block;
+    margin:8px;
 }
 
 .hero-content h1{
@@ -212,6 +211,7 @@ nav a{
 
 }
 </style>
+
 </head>
 
 <body>
@@ -225,27 +225,22 @@ nav a{
 <a href="products.html">Products</a>
 <a href="calculator.html">Calculator</a>
 <a href="affiliate.html">Affiliate</a>
-<a href="login.html">Admin</a>
+<a href="admin_login.html">Admin</a>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<!-- Background Video -->
-<video autoplay muted loop playsinline>
-<source src="vid1.mp4" type="video/mp4">
-Your browser does not support HTML5 video.
+<video id="bgVideo" autoplay muted loop playsinline preload="auto">
+    <source src="mc11.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
 </video>
 
 <div class="hero-content">
-
 <h1>Premium Aluminum Solutions</h1>
-
 <p>Strong • Secure • Professional</p>
-
 <a href="products.html" class="btn">Explore Products</a>
-
 </div>
 
 </section>
@@ -275,10 +270,11 @@ Your browser does not support HTML5 video.
 <h3>Nationwide Service</h3>
 <p>Reliable service across South Africa with excellent customer support.</p>
 </div>
-    <div class="card">
-<h3>finance and easy terms</h3>
-<p>you can now use buy now pay later programme</p></div>
-    
+
+<div class="card">
+<h3>Finance & Easy Terms</h3>
+<p>You can now use our Buy Now Pay Later programme.</p>
+</div>
 
 </div>
 
@@ -288,18 +284,29 @@ Your browser does not support HTML5 video.
 
 <h3>THUBALESHA GENERAL TRADING</h3>
 
-
 <p>📞 016 989 1005</p>
-
 <p>📱 WhatsApp: 065 691 1520</p>
-
-<p>✉ thubalesha.gen@gmail.com</p>
+<p>✉️ thubalesha.gen@gmail.com</p>
 
 <p>© 2026 THUBALESHA GENERAL TRADING. All Rights Reserved.</p>
 
 </footer>
 
 <a class="whatsapp" href="https://wa.me/27656911520" target="_blank">💬</a>
+
+<script>
+const video = document.getElementById("bgVideo");
+
+video.muted = true;
+video.loop = true;
+video.playsInline = true;
+
+video.play().catch(() => {
+    document.addEventListener("click", function () {
+        video.play();
+    }, {once:true});
+});
+</script>
 
 </body>
 </html>
