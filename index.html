@@ -1,13 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>THUBALESHA GENERAL TRADING</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THUBALESHA GENERAL TRADING | Premium Aluminum Solutions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8fc;
+    color:#222;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#0057b8;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+header h2{
+    color:#fff;
+    font-size:28px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* Hero Section */
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    z-index:-2;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:-1;
+}
+
+.hero-content{
+    color:#fff;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ffd700;
+    color:#000;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffffff;
+}
+
+/* Features */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.container h2{
+    text-align:center;
+    color:#0057b8;
+    margin-bottom:35px;
+    font-size:36px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0057b8;
+    margin-bottom:15px;
+}
+
+/* Footer */
+footer{
+    background:#0057b8;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+footer a{
+    color:#ffd700;
+    text-decoration:none;
+}
+
+/* WhatsApp */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    margin:8px;
+    display:inline-block;
+}
+
+.hero-content h1{
+    font-size:36px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+}
+</style>
 </head>
+
 <body>
 
 <header>
+
 <h2>THUBALESHA GENERAL TRADING</h2>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="products.html">Products</a>
@@ -15,24 +227,76 @@
 <a href="affiliate.html">Affiliate</a>
 <a href="login.html">Admin</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<h1>Premium Aluminum Solutions</h1>
-<p>Strong • Secure • Professional</p>
-<br>
-<a href="products.html" class="btn">Explore Products</a>
-</section>
 
-<div class="container">
-<h2>Why Choose Us?</h2>
-<p>✔ High Quality Aluminum</p>
-<p>✔ Competitive Pricing</p>
-<p>✔ Expert Installation</p>
-<p>✔ Nationwide Service</p>
+<!-- Background Video -->
+<video autoplay muted loop playsinline>
+<source src="mc11.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+
+<div class="hero-content">
+
+<h1>Premium Aluminum Solutions</h1>
+
+<p>Strong • Secure • Professional</p>
+
+<a href="products.html" class="btn">Explore Products</a>
+
 </div>
 
-<a href="https://wa.me/27787102337" class="whatsapp">💬</a>
+</section>
+
+<section class="container">
+
+<h2>Why Choose THUBALESHA?</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>High Quality</h3>
+<p>Premium aluminum windows, doors, folding doors and shopfronts built to last.</p>
+</div>
+
+<div class="card">
+<h3>Affordable Prices</h3>
+<p>Competitive pricing without compromising on quality.</p>
+</div>
+
+<div class="card">
+<h3>Professional Installation</h3>
+<p>Experienced installers ensuring quality workmanship every time.</p>
+</div>
+
+<div class="card">
+<h3>Nationwide Service</h3>
+<p>Reliable service across South Africa with excellent customer support.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>THUBALESHA GENERAL TRADING</h3>
+
+<p>Premium Aluminum Solutions</p>
+
+<p>📞 016 989 1005</p>
+
+<p>📱 WhatsApp: 065 691 1520</p>
+
+<p>✉ info@thubalesha.co.za</p>
+
+<p>© 2026 THUBALESHA GENERAL TRADING. All Rights Reserved.</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/27656911520" target="_blank">💬</a>
 
 </body>
 </html>
