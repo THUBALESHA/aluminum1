@@ -1,19 +1,404 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><title>THUBALESHA GENERAL TRADING</title><style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f4f8fc}header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;background:#0057b8;color:#fff;padding:15px 20px}nav a{color:#fff;text-decoration:none;margin:0 8px}.hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.hero:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:-1}.btn{background:#ffd700;color:#000;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold}.container{max-width:1100px;margin:auto;padding:60px 20px}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card,.gallery img{background:#fff;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.15)}.card{padding:20px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.gallery img{width:100%;height:220px;object-fit:cover;cursor:pointer;transition:.3s}.gallery img:hover{transform:scale(1.04)}.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);justify-content:center;align-items:center;z-index:9999}.lightbox img{max-width:95%;max-height:95%}footer{background:#0057b8;color:#fff;text-align:center;padding:30px}.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:28px}@media(max-width:768px){header{flex-direction:column}}
-</style></head><body>
-<header><h2>THUBALESHA GENERAL TRADING</h2><nav><a href=index.html>Home</a><a href=products.html>Products</a><a href=calculator.html>Calculator</a><a href=affiliate.html>Affiliate</a><a href=admin_login.html>Admin</a></nav></header>
-<section class=hero><video autoplay muted loop playsinline><source src='mc1.mp4' type='video/mp4'></video><div><h1>Premium Aluminum Solutions</h1><p>Strong • Secure • Professional</p><br><a class=btn href=products.html>Explore Products</a></div></section>
-<section class=container><h2>Why Choose THUBALESHA?</h2><div class=features><div class=card><h3>High Quality</h3><p>Premium aluminium solutions.</p></div><div class=card><h3>Affordable Prices</h3><p>Competitive pricing.</p></div><div class=card><h3>Professional Installation</h3><p>Experienced installers.</p></div><div class=card><h3>Nationwide Service</h3><p>Reliable support.</p></div><div class=card><h3>Finance</h3><p>Buy Now Pay Later available.</p></div></div></section>
-<section class=container><h2>Project Gallery</h2><div class=gallery><img src='img1.png' onclick="openImage(this.src)"><img src='img2.png' onclick="openImage(this.src)"><img src='img3.png' onclick="openImage(this.src)"><img src='img4.png' onclick="openImage(this.src)"><img src='img5.png' onclick="openImage(this.src)"><img src='img1.jpg' onclick="openImage(this.src)"><img src='img7.png' onclick="openImage(this.src)"><img src='img8.png' onclick="openImage(this.src)"><img src='img9.png' onclick="openImage(this.src)"><img src='img10.png' onclick="openImage(this.src)"></div></section>
-  <!-- Video -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THUBALESHA GENERAL TRADING</title>
 
-<video controls preload="metadata"
-style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.15);">
-    <source src="vid11.mp4" type="video/mp4">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f8fc;
+    color:#333;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#0057b8;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+header h2{
+    font-size:24px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:-1;
+}
+
+.hero-content{
+    max-width:700px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ffd700;
+    color:#000;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.container h2{
+    text-align:center;
+    color:#0057b8;
+    margin-bottom:40px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    color:#0057b8;
+    margin-bottom:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.gallery img,
+.gallery video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.gallery img{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:95%;
+}
+
+footer{
+    background:#0057b8;
+    color:#fff;
+    text-align:center;
+    padding:35px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+header h2{
+    margin-bottom:10px;
+}
+
+nav{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>THUBALESHA GENERAL TRADING</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="calculator.html">Calculator</a>
+
+<a href="affiliate.html">Affiliate</a>
+
+<a href="admin_login.html">Admin</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+
+<source src="mc1.mp4" type="video/mp4">
+
 </video>
-  
-<div id=lightbox class=lightbox onclick='closeImage()'><img id=lightboxImg></div>
-<footer><h3>THUBALESHA GENERAL TRADING</h3><p>016 989 1005</p><p>WhatsApp: 065 691 1520</p><p>thubalesha.gen@gmail.com</p></footer>
-<a class=whatsapp href='https://wa.me/27656911520'>💬</a>
-<script>function openImage(s){lightbox.style.display='flex';lightboxImg.src=s}function closeImage(){lightbox.style.display='none'}</script>
-</body></html>
+
+<div class="hero-content">
+
+<h1>Premium Aluminum Solutions</h1>
+
+<p>Strong • Secure • Professional</p>
+
+<a href="products.html" class="btn">Explore Products</a>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2>Why Choose THUBALESHA?</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>High Quality</h3>
+<p>Premium aluminium windows, doors and custom solutions.</p>
+</div>
+
+<div class="card">
+<h3>Affordable Prices</h3>
+<p>Competitive pricing without compromising quality.</p>
+</div>
+
+<div class="card">
+<h3>Professional Installation</h3>
+<p>Experienced installers and reliable workmanship.</p>
+</div>
+
+<div class="card">
+<h3>Nationwide Service</h3>
+<p>Reliable customer support across South Africa.</p>
+</div>
+
+<div class="card">
+<h3>Finance Available</h3>
+<p>Buy Now Pay Later options available.</p>
+</div>
+
+</div>
+
+</section>
+<section class="container">
+
+<h2>Project Gallery</h2>
+
+<div class="gallery">
+
+<img src="img1.png" alt="Project 1" onclick="openImage(this.src)">
+
+<img src="img2.png" alt="Project 2" onclick="openImage(this.src)">
+
+<img src="img3.png" alt="Project 3" onclick="openImage(this.src)">
+
+<img src="img4.png" alt="Project 4" onclick="openImage(this.src)">
+
+<img src="img5.png" alt="Project 5" onclick="openImage(this.src)">
+
+<img src="img1.jpg" alt="Project 6" onclick="openImage(this.src)">
+
+<img src="img7.png" alt="Project 7" onclick="openImage(this.src)">
+
+<img src="img8.png" alt="Project 8" onclick="openImage(this.src)">
+
+<img src="img9.png" alt="Project 9" onclick="openImage(this.src)">
+
+<img src="img10.png" alt="Project 10" onclick="openImage(this.src)">
+
+<!-- Gallery Video -->
+<video controls preload="metadata" controlsList="nodownload">
+    <source src="vid11.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+</div>
+
+</section>
+
+<!-- Image Lightbox -->
+
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+
+<img id="lightboxImg" src="" alt="Preview">
+
+</div>
+<footer>
+
+<h2>THUBALESHA GENERAL TRADING</h2>
+
+<p><strong>Premium Aluminium Solutions</strong></p>
+
+<br>
+
+<p>📞 Tel: 016 989 1005</p>
+
+<p>📱 WhatsApp: 065 691 1520</p>
+
+<p>✉️ Email: thubalesha.gen@gmail.com</p>
+
+<br>
+
+<p>&copy; 2026 THUBALESHA GENERAL TRADING. All Rights Reserved.</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/27656911520"
+target="_blank"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+<script>
+
+function openImage(src){
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("lightboxImg").src=src;
+
+}
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+
+</script>
+</body>
+</html
